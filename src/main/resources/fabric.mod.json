@@ -14,6 +14,9 @@
       "com.kewz4.keepitems.KeepItemsMod"
     ]
   },
+  "mixins": [
+    "keep_mega_items.mixins.json"
+  ],
   "depends": {
     "fabricloader": ">=0.16.0",
     "fabric-api": "*",

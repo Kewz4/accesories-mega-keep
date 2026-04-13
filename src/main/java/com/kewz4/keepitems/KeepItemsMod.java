@@ -79,6 +79,8 @@ public class KeepItemsMod implements ModInitializer {
             LOGGER.info("[{}] Accessories mod not detected - only handling regular inventory slots.", MOD_ID);
         }
 
+        NoFallDamageHandler.register();
+
         LOGGER.info("[{}] Mod initialized. Protecting {} items on death.", MOD_ID, KEEP_ITEMS.size());
     }
 
@@ -125,6 +127,7 @@ public class KeepItemsMod implements ModInitializer {
                 return;
             }
 
+            NoFallDamageHandler.clear(oldPlayer);
             List<ItemStack> toRestore = PENDING_ITEMS.remove(oldPlayer.getUuid());
             if (toRestore == null || toRestore.isEmpty()) {
                 return;
