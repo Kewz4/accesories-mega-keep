@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "keep_mega_items",
+  "version": "${version}",
+  "name": "Keep Mega Items on Death",
+  "description": "Keeps mega evolution and Z-Move items on player death, including items worn in accessory slots.",
+  "authors": [
+    "kewz4"
+  ],
+  "license": "MIT",
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      "com.kewz4.keepitems.KeepItemsMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "fabric-api": "*",
+    "minecraft": "1.21.1"
+  },
+  "suggests": {
+    "accessories": "*"
+  }
+}
